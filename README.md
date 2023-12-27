@@ -9,8 +9,9 @@
 .
 محاسبه TF (Term Frequency):
 در این مرحله، برای هر کلمه در هر سند، فراوانی آن کلمه در آن سند محاسبه می‌شود. این مقدار نشان دهنده تعداد ظاهر شدن کلمه در سند است. این مقادیر در دیکشنری tf ذخیره می‌شوند.
-pyhton code:
-'''python
+
+'''
+    python
 
     tf = {}
     word_to_index_map = {}
@@ -32,5 +33,11 @@ pyhton code:
     document_vector = np.array([tf.get((doc_id, i), 0) for i in range(len(word_to_index_map))])
     document_vectors.append(document_vector)
 
+'''
+# توضیح کد
+''' def load_documents_from_json(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        documents = json.load(file)
+    return documents
 '''
 
